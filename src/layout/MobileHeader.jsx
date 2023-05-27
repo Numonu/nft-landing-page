@@ -24,22 +24,22 @@ export default function MobileHeader() {
 					<ul className="overflow-hidden flex flex-col items-center gap-4 text-2xl capitalize">
 						<li>
 							<button>
-								<a href="#">collection</a>
+								<a href="#">Collection</a>
 							</button>
 						</li>
 						<li>
 							<button>
-								<a href="#">market place</a>
+								<a href="#">Market Place</a>
 							</button>
 						</li>
 						<li>
 							<button>
-								<a href="#">community</a>
+								<a href="#">Community</a>
 							</button>
 						</li>
 						<li>
 							<button className="border-neutral-50 px-4 py-2 border-2 rounded-full">
-								<a href="#" onClick={() => alert("click")}>connect walet</a>
+								<a href="#" onClick={() => alert("click")}>Connect Walet</a>
 							</button>
 						</li>
 					</ul>

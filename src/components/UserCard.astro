@@ -1,0 +1,31 @@
+---
+const {
+	name = "Jhon Doe",
+	date = "Actual Date , March 22",
+	profileUrl,
+	bannertUrl,
+} = Astro.props;
+---
+
+<div class="relative">
+	<div
+		class="bg-sky-300 w-16 aspect-square rounded-full absolute top-[20%] left-[50%] -translate-x-1/2 md:scale-150 blur-[54px]"
+	>
+	</div>
+	<div
+		class="bg-zinc-500 bg-opacity-10 relative flex flex-col gap-2 items-center rounded-2xl"
+	>
+		<img
+			class="w-24 aspect-square -mt-12 rounded-full object-cover"
+			src={profileUrl}
+			alt="user icon"
+		/>
+		<h1 class="text-xl">{name}</h1>
+		<h2 class="mb-4">{date}</h2>
+		<img
+			class="w-full h-44 object-cover rounded-3xl"
+			src={bannertUrl}
+			alt="user banner"
+		/>
+	</div>
+</div>

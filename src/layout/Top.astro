@@ -1,0 +1,39 @@
+---
+import { BsArrowRight } from "react-icons/bs";
+import UserCard from "../components/UserCard.astro";
+const users = [
+    {
+        username : "Jhon Doe",
+        date : "March , 2023",
+        profileUrl : "https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601_1280.jpg",
+        bannerUrl : "https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267_1280.jpg",
+    },
+    {
+        username : "Jhon Doe",
+        date : "March , 2023",
+        profileUrl : "https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601_1280.jpg",
+        bannerUrl : "https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267_1280.jpg",
+    }
+]
+---
+
+<div class="py-12 grid grid-cols-1 gap-8 lg:grid-cols-[1fr_2fr] lg:py-16 xl:py-28">
+    <div class="h-full flex flex-col gap-4 sm:items-center sm:text-center lg:text-start lg:items-start lg:justify-center">
+        <h2 class="text-kiwi text-xl">Artist</h2>
+		<h1 class="text-3xl lg:text-5xl">Top List <br /> Artist</h1>
+		<p class="text-xl sm:max-w-[90%]">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+			explicabo cumque tenetur.
+		</p>
+		<button class="py-2 text-lg text-start lg:text-xl">
+            See all <BsArrowRight className="inline" />
+		</button>
+	</div>
+    <div class="w-full h-full py-12 grid grid-cols-1 gap-20 sm:mx-auto lg:mx-0 sm:grid-cols-2 sm:gap-8 lg:grid-cols-2">
+        {
+            users.map(e => {
+                return <UserCard name={e.username} date={e.date} profileUrl={e.profileUrl} bannertUrl={e.bannerUrl}/>
+            })
+        }
+    </div>
+</div>

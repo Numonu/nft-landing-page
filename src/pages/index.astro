@@ -6,6 +6,7 @@ import MobileHeader from "../layout/MobileHeader";
 import Trending from "../layout/Trending.astro";
 import "../global/styles.css";
 import Blobs from "../components/Blobs.astro";
+import Top from "../layout/Top.astro";
 ---
 
 <html lang="en">
@@ -15,8 +16,8 @@ import Blobs from "../components/Blobs.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="bg-zinc-800 text-neutral-50 relative min-h-screen font-nunito">
-		<Blobs/>
+	<body class="bg-zinc-800 text-neutral-50 relative min-h-screen font-nunito overflow-x-hidden">
+		<!-- <Blobs/> -->
 		<div class="backdrop-blur-[120px]">
 			<div class="max-w-[1200px] mx-auto px-4">
 				<section>
@@ -31,6 +32,9 @@ import Blobs from "../components/Blobs.astro";
 				</section>
 				<section>
 					<Trending />
+				</section>
+				<section>
+					<Top />
 				</section>
 			</div>
 		</div>
