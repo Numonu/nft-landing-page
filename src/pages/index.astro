@@ -16,26 +16,30 @@ import Top from "../layout/Top.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="bg-zinc-800 text-neutral-50 relative min-h-screen font-nunito overflow-x-hidden">
-		<!-- <Blobs/> -->
-		<div class="backdrop-blur-[120px]">
-			<div class="max-w-[1200px] mx-auto px-4">
-				<section>
-					<div class="lg:hidden">
-						<MobileHeader client:load />
-					</div>
-					<div class="hidden lg:block">
-						<DesktopHeader />
-					</div>
-					<Hero />
-					<Summary />
-				</section>
-				<section>
-					<Trending />
-				</section>
-				<section>
-					<Top />
-				</section>
+	<body>
+		<div
+			class="bg-zinc-800 text-neutral-50 relative min-h-screen font-nunito overflow-hidden"
+		>
+			<Blobs />
+			<div class="backdrop-blur-[120px]">
+				<div class="max-w-[1200px] mx-auto px-4">
+					<section>
+						<div class="lg:hidden">
+							<MobileHeader client:load />
+						</div>
+						<div class="hidden lg:block">
+							<DesktopHeader />
+						</div>
+						<Hero />
+						<Summary />
+					</section>
+					<section>
+						<Trending />
+					</section>
+					<section>
+						<Top />
+					</section>
+				</div>
 			</div>
 		</div>
 	</body>
