@@ -1,0 +1,51 @@
+---
+import Section from "../components/Section.astro";
+import Summary from "../components/Summary.astro";
+import DesktopHeader from "../layout/DesktopHeader.astro";
+import Hero from "../layout/Hero.astro";
+import MobileHeader from "../layout/MobileHeader";
+import Trending from "../layout/Trending.astro";
+import "../global/styles.css";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="bg-zinc-800 text-neutral-50 min-h-screen font-nunito">
+		<Section>
+			<div slot="blobs">
+				<div
+					class="bg-orange-400 w-52 aspect-square rounded-full absolute top-1/3 left-0 md:scale-150"
+				>
+				</div>
+				<div
+					class="bg-lime-300 w-32 aspect-square rounded-full absolute top-[75%] left-[35%] md:scale-150"
+				>
+				</div>
+				<div
+					class="bg-yellow-300 w-52 aspect-square rounded-full absolute top-[25%] left-[80%] md:scale-150"
+				>
+				</div>
+			</div>
+			<div slot="content">
+				<div class="lg:hidden">
+					<MobileHeader client:load />
+				</div>
+				<div class="hidden lg:block">
+					<DesktopHeader />
+				</div>
+				<Hero/>
+				<Summary/>
+			</div>
+		</Section>
+		<Section>
+			<div slot="content">
+				<Trending/>
+			</div>
+		</Section>
+	</body>
+</html>

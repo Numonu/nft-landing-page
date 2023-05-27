@@ -1,0 +1,63 @@
+---
+const images = [
+	"https://cdn.pixabay.com/photo/2018/02/24/20/40/fashion-3179178_1280.jpg",
+    "https://cdn.pixabay.com/photo/2017/06/26/02/47/man-2442565_1280.jpg",
+    "https://cdn.pixabay.com/photo/2012/06/19/10/32/owl-50267_1280.jpg",
+    "https://cdn.pixabay.com/photo/2015/01/08/18/29/entrepreneur-593358_1280.jpg",
+    "https://cdn.pixabay.com/photo/2015/01/27/09/58/man-613601_1280.jpg"
+];
+const statistics = [
+	{
+		title: "Artwork",
+		value: "27",
+	},
+	{
+		title: "Auction",
+		value: "25",
+	},
+	{
+		title: "Artist",
+		value: "12",
+	},
+];
+---
+
+<div
+	class="bg-zinc-500 bg-opacity-10 rounded-lg p-6 max-w-[1000px] mx-auto flex items-center justify-between gap-6 flex-wrap md:p-12 md:rounded-3xl"
+>
+	<div class="flex gap-6 mx-auto sm:mx-0">
+		{
+			statistics.map((e) => {
+				return (
+					<div>
+						<h2>{e.title}</h2>
+						<span class="text-4xl font-medium md:text-5xl">
+							{" "}
+							{e.value}K+
+						</span>
+					</div>
+				);
+			})
+		}
+	</div>
+	<div
+		class="flex flex-col items-center mx-auto sm:mx-0 gap-2 md:items-start"
+	>
+		<h2>
+			Art <span class="font-medium text-2xl ml-2">3.4 ETH</span>
+		</h2>
+		<div class="flex">
+			{
+				images.map((e) => {
+					return (
+						<img
+							class="w-12 -mr-2 aspect-square object-cover rounded-full xl:w-16"
+							src={e}
+							alt="user icon"
+						/>
+					);
+				})
+			}
+		</div>
+	</div>
+</div>

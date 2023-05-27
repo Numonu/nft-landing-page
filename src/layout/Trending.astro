@@ -1,0 +1,57 @@
+---
+import { BsArrowRight } from "react-icons/bs";
+const cards = [
+	{
+		image: "images/yellow_robot.png",
+		gradientLeft: "from-yellow-300",
+		gradientRight: "to-orange-300",
+	},
+	{
+		image: "images/blue_robot.png",
+		gradientLeft: "from-blue-500",
+		gradientRight: "to-red-200",
+	},
+    {
+		image: "images/green_robot.png",
+		gradientLeft: "from-green-500",
+		gradientRight: "to-lime-300",
+	},
+    {
+		image: "images/purple_robot.png",
+		gradientLeft: "from-purple-500",
+		gradientRight: "to-cyan-300",
+	},
+];
+---
+
+<div class="py-12 lg:grid lg:grid-cols-2 lg:py-16">
+	<div class="h-full flex flex-col gap-4 sm:items-center sm:text-center lg:text-start lg:items-start lg:justify-center">
+		<h2 class="text-kiwi text-xl">Popular Item</h2>
+		<h1 class="text-3xl lg:text-5xl">Hot Trending <br /> On This Week</h1>
+		<p class="text-xl sm:max-w-[90%]">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+			explicabo cumque tenetur, repellendus quis veritatis aperiam aut
+			dignissimos molestiae expedita?
+		</p>
+		<button class="py-2 text-lg text-start lg:text-xl">
+			See all <BsArrowRight className="inline" />
+		</button>
+	</div>
+	<div class="w-full h-full grid grid-cols-2 gap-2 sm:max-w-[600px] sm:mx-auto lg:mx-0">
+		{
+			cards.map((e) => {
+				return (
+					<div class="relative w-full h-full aspect-square pt-24 overflow-hidden">
+						<div class={`bg-gradient-to-r ${e.gradientLeft} ${e.gradientRight} w-full h-full rounded-xl`}>
+							<img
+								class="absolute top-0 left-1/2 w-2/3 -translate-x-1/2"
+								src={e.image}
+								alt="ilustracion de robot"
+							/>
+						</div>
+					</div>
+				);
+			})
+		}
+	</div>
+</div>

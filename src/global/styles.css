@@ -1,0 +1,19 @@
+html{
+    font-size: 14px;
+}
+/*Seup fonts*/
+@font-face {
+    font-family: "Nunito";
+    src: url("fonts/NunitoSans_10pt-Light.ttf");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Nunito";
+    src: url("fonts/NunitoSans_10pt-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Nunito";
+    src: url("fonts/NunitoSans_10pt-Medium.ttf");
+    font-weight: 500;
+}
