@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { HiOutlineBars3 } from "react-icons/hi2";
 
 export default function MobileHeader() {
 	const [menu, setMenu] = useState(false);
@@ -14,7 +13,7 @@ export default function MobileHeader() {
 					onClick={() => (menu ? off() : on())}
 				>
 					<h2 className="text-2xl">Numonu</h2>
-					<HiOutlineBars3 className="text-3xl cursor-pointer" />
+					<i className="fa-solid fa-bars text-3xl cursor-pointer"></i>
 				</div>
 				<div
 					className={`${
