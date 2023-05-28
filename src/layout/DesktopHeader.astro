@@ -1,28 +1,34 @@
+---
+import Link from "../components/Link.astro";
+const items = ["Collection", "Market Place", "Community", "Contact"];
+---
+
 <header class="py-4 font-light">
 	<div class="flex justify-between items-center">
-		<h2 class="text-2xl">EnDasmu</h2>
+		<h2 class="text-2xl">Numonu</h2>
 		<ul class="overflow-hidden flex items-center gap-12 text-xl">
+			{
+				items.map((e) => {
+					return (
+						<li>
+							<a
+								class="text-neutral-400 hover:text-neutral-50"
+								href="#"
+							>
+								{e}
+							</a>
+						</li>
+					);
+				})
+			}
 			<li>
-				<button>
-					<a href="#">Collection</a>
-				</button>
-			</li>
-			<li>
-				<button>
-					<a href="#">Market Place</a>
-				</button>
-			</li>
-			<li>
-				<button>
-					<a href="#">Community</a>
-				</button>
-			</li>
-			<li>
-				<button
-					class="border-neutral-50 px-4 py-2 border-2 rounded-full"
-				>
-					<a href="#">Connect Walet</a>
-				</button>
+				<Link>
+					<button
+						class="border-neutral-50 text-neutral-50 px-4 py-2 border-2 rounded-full hover:bg-neutral-50 hover:text-zinc-900 transition-colors"
+					>
+						Connect Wallet
+					</button>
+				</Link>
 			</li>
 		</ul>
 	</div>

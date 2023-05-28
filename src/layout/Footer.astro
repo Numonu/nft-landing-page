@@ -23,7 +23,9 @@ const sections = [
 ];
 ---
 
-<section class="py-16 pt-24 grid grid-cols-2 gap-8 md:grid-cols-[2fr_1fr_1fr_1fr] lg:grid-cols-[2fr_1fr_1fr_1fr_1fr]">
+<section
+	class="py-16 pt-24 grid grid-cols-2 gap-8 md:grid-cols-[2fr_1fr_1fr_1fr] lg:grid-cols-[2fr_1fr_1fr_1fr_1fr]"
+>
 	<div class="flex flex-col gap-4">
 		<h1 class="text-xl mb-2">EnDasmu</h1>
 		<p>
@@ -37,7 +39,9 @@ const sections = [
 			<li><BsMedium /></li>
 			<li><FaTelegramPlane /></li>
 		</ul>
-		<span>Copyright <AiOutlineCopyright className="inline"/> MetaSpace 2022</span>
+		<span
+			>Copyright <AiOutlineCopyright className="inline" /> Numonu 2023</span
+		>
 	</div>
 	{
 		sections.map((e) => {
@@ -45,11 +49,13 @@ const sections = [
 				<articles class="flex flex-col gap-4">
 					<h1 class="text-xl">{e.title}</h1>
 					<ul>
-						{
-                            e.items.map(e => {
-                                return <li>{e}</li>
-                            })
-                        }
+						{e.items.map((e) => {
+							return (
+								<li>
+									<a class="text-neutral-400 hover:text-neutral-50" href="#">{e}</a>
+								</li>
+							);
+						})}
 					</ul>
 				</articles>
 			);

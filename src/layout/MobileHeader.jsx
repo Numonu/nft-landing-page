@@ -13,7 +13,7 @@ export default function MobileHeader() {
 					className="flex justify-between items-center"
 					onClick={() => (menu ? off() : on())}
 				>
-					<h2 className="text-2xl">EnDasmu</h2>
+					<h2 className="text-2xl">Numonu</h2>
 					<HiOutlineBars3 className="text-3xl cursor-pointer" />
 				</div>
 				<div
@@ -23,23 +23,20 @@ export default function MobileHeader() {
 				>
 					<ul className="overflow-hidden flex flex-col items-center gap-4 text-2xl capitalize">
 						<li>
-							<button>
-								<a href="#">Collection</a>
-							</button>
+							<a href="#">Collection</a>
 						</li>
 						<li>
-							<button>
-								<a href="#">Market Place</a>
-							</button>
+							<a href="#">Marketplace</a>
 						</li>
 						<li>
-							<button>
-								<a href="#">Community</a>
-							</button>
+							<a href="#">Community</a>
+						</li>
+						<li>
+							<a href="#">Contact</a>
 						</li>
 						<li>
 							<button className="border-neutral-50 px-4 py-2 border-2 rounded-full">
-								<a href="#" onClick={() => alert("click")}>Connect Walet</a>
+								<a href="#">Connect Wallet</a>
 							</button>
 						</li>
 					</ul>
