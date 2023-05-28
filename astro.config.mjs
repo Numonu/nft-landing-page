@@ -6,6 +6,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  site : "numonu.github.io",
+  site : "https://numonu.github.io",
   base : "/nft-landing-page",
 });
