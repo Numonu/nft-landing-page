@@ -4,9 +4,12 @@ import DesktopHeader from "../layout/DesktopHeader.astro";
 import Hero from "../layout/Hero.astro";
 import MobileHeader from "../layout/MobileHeader";
 import Trending from "../layout/Trending.astro";
-import "../global/styles.css";
 import Blobs from "../components/Blobs.astro";
 import Top from "../layout/Top.astro";
+import Sponsor from "../layout/Sponsor.astro";
+import Newsletter from "../layout/Newsletter.astro";
+import "../global/styles.css";
+import Footer from "../layout/Footer.astro";
 ---
 
 <html lang="en">
@@ -14,7 +17,7 @@ import Top from "../layout/Top.astro";
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>NFT</title>
 	</head>
 	<body>
 		<div
@@ -33,12 +36,11 @@ import Top from "../layout/Top.astro";
 						<Hero />
 						<Summary />
 					</section>
-					<section>
-						<Trending />
-					</section>
-					<section>
-						<Top />
-					</section>
+					<Trending />
+					<Top />
+					<Sponsor />
+					<Newsletter />
+					<Footer/>
 				</div>
 			</div>
 		</div>

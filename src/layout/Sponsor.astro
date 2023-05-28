@@ -1,0 +1,16 @@
+---
+const images = [
+    "images/google.webp",
+    "images/openSea.webp",
+    "images/binance.webp",
+    "images/unreal.webp",
+    "images/quixel.webp",
+]
+---
+<section class="flex flex-wrap gap-8 justify-center py-12 sm:gap-12 lg:gap-20">
+    {
+        images.map(e => {
+            return <img class="h-36 aspect-square object-contain" src={e}/>
+        })
+    }
+</section>

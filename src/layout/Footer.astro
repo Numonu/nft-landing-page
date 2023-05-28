@@ -1,0 +1,58 @@
+---
+import { AiOutlineCopyright, AiOutlineTwitter } from "react-icons/ai";
+import { FaTelegramPlane } from "react-icons/fa";
+import { BsDiscord, BsMedium } from "react-icons/bs";
+
+const sections = [
+	{
+		title: "Explore",
+		items: ["Art", "Collectibles", "Domani Name", "Utility"],
+	},
+	{
+		title: "Statistics",
+		items: ["Ranking", "Activity"],
+	},
+	{
+		title: "Resource",
+		items: ["Help Center", "Platform Status", "Partners", "Blog"],
+	},
+	{
+		title: "Company",
+		items: ["About Us", "Carrer", "Suport"],
+	},
+];
+---
+
+<section class="py-16 pt-24 grid grid-cols-2 gap-8 md:grid-cols-[2fr_1fr_1fr_1fr] lg:grid-cols-[2fr_1fr_1fr_1fr_1fr]">
+	<div class="flex flex-col gap-4">
+		<h1 class="text-xl mb-2">EnDasmu</h1>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae autem
+			velit eaque facilis numquam nihil accusamus fugiat repellat nisi
+			explicabo?
+		</p>
+		<ul class="flex gap-2 text-2xl">
+			<li><BsDiscord /></li>
+			<li><AiOutlineTwitter /></li>
+			<li><BsMedium /></li>
+			<li><FaTelegramPlane /></li>
+		</ul>
+		<span>Copyright <AiOutlineCopyright className="inline"/> MetaSpace 2022</span>
+	</div>
+	{
+		sections.map((e) => {
+			return (
+				<articles class="flex flex-col gap-4">
+					<h1 class="text-xl">{e.title}</h1>
+					<ul>
+						{
+                            e.items.map(e => {
+                                return <li>{e}</li>
+                            })
+                        }
+					</ul>
+				</articles>
+			);
+		})
+	}
+</section>
